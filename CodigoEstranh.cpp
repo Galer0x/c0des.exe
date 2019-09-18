@@ -78,7 +78,14 @@ int main(){
 		break;
 		
 		default:	
-		cout << "VALOR INVALIDO";
+		system("cls");
+		if (parcial > 0){
+			cout << "SEU VALOR TOTAL A PAGAR EH: " << parcial << " R$" << endl;
+			cout << "SAINDO DO PROGRAMA..." << endl;
+			system ("pause"); 
+		}else{
+			cout << "SAINDO DO PROGRAMA..." << endl;
+		}
 		break;
 		}
 		

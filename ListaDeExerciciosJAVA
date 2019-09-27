@@ -1,0 +1,116 @@
+
+package newpackage;
+
+public class ClasseQuadrado {
+private double lado;
+    
+public void alterarValorDoLado(double lado){ 
+    this.lado=lado; 
+}
+public double retornarValorLado(){
+    return lado;
+}
+public void calcularArea(){
+   double area=lado*lado; 
+   System.out.println("A Area é: "+area);
+}
+    
+}
+
+-------------------------------------------------------------------------------------------------------
+
+
+package newpackage;
+
+public class ClasseBola {
+    private String cor; 
+    private double circuferencia;
+    private String material;
+   
+    public void TrocaCor(String cor){
+    this.cor=cor; 
+    }
+    public String mostraCor(){
+        return cor; 
+    }
+    
+}
+
+-------------------------------------------------------------------------------------------------------
+
+
+package newpackage; 
+
+public class ClasseRetangulo {
+   private double lado;
+   private double altura;
+   
+    public void mudarValorLado(double lado, double altura){
+        this.lado=lado; 
+        this.altura=altura;
+    }
+    public double retornarLado(){
+        return lado;
+    }
+    public double retornarAltura(){
+        return altura; 
+    }
+    public double calcularArea(double lado, double altura){
+        return lado*altura;
+    }
+    public double calcularPerimetro(double lado, double altura){
+        return (2*lado+2*altura); 
+    }   
+}
+
+// CLASSE PRINCIPAL PARA ClasseRetangulo // 
+
+package newpackage;
+import java.util.Scanner;
+
+public class LISTA {
+    public static void main(String[] args) {
+       ClasseRetangulo retangulo = new ClasseRetangulo();
+       Scanner leitor = new Scanner(System.in);
+      
+       double altura;
+       double base;
+       double quantPisos;
+       double rodape;
+       
+        System.out.println("DIGITE A ALTURA DO RETANGULO: ");
+        altura=leitor.nextDouble();
+        System.out.println("DIGITE O VALOR DA BASE: ");
+        base=leitor.nextDouble();
+        
+        quantPisos=retangulo.calcularArea(base, altura);
+        System.out.println("A QUANTIDADE DE PISO EH: "+quantPisos+ " m2");
+        
+        rodape=retangulo.calcularPerimetro(base, altura);
+        System.out.println("A QUANTIDADE DE RODAPE EH: "+rodape+ " m2");
+    }
+}
+
+-------------------------------------------------------------------------------------------------------
+
+( CODIGO INCOMPLETO ! ) 
+
+package newpackage;
+public class ClassePessoa {
+    private String nome;
+    private double idade;
+    private double peso;
+    private double altura; 
+    
+    public void envelhecer (double idade){
+    this.idade=idade;
+    if (idade < 21){
+        altura = +0.5;
+    }
+}
+ 
+}
+
+-------------------------------------------------------------------------------------------------------
+
+

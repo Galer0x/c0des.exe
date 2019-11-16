@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include <conio.h>
 
 // MARCOS ANDRE MARQUES CELESTINO - Encarregado pelas gambiarras // 
 
@@ -100,7 +101,7 @@ void compras(char n){
 
 // STRUCT PARA ARMAZENAMENTO DE DADOS DO CLIENTE // 
 struct fichaDoCliente{
-	string nome; 
+	char nome[40]; 
 	int idade;
 	string cpf; 
 };
@@ -136,8 +137,9 @@ if (d1 == 's' or d1 == 'S'){
 	cout << "			PAGINA DE CADASTRO" << endl; 
 	cout << endl;
 	cout << "POR FAVOR, DIGITE SEU NOME: " << endl;
-	cin >> cliente.nome;
-	cout << "DIGITE SUA IDADE: " << endl;
+	fflush(stdin); 
+	fgets(cliente.nome,40,stdin);
+	cout << "DIGITE SUA IDADE: ";
 	cin >> cliente.idade;
 	cout << "DIGITE SEU CPF: " << endl;
 	cin >> cliente.cpf;
